@@ -1,0 +1,290 @@
+/* 
+   :root ist das oberste Element im Dokument.
+   Hier werden sogenannte CSS-Variablen (Custom Properties) definiert,
+   die später im Code mit var(--name) wiederverwendet werden können.
+*/
+:root {
+    /* Schriftart für Fließtext */
+    --text-schriftart: Inter;
+
+    /* Schriftart für Überschriften */
+    --ueberschriften: Momo Trust Sans;
+
+    /* Hauptfarbe für Elemente oder Überschriften */
+    --haupt-farbe: #22577A;
+
+    /* Hintergrundfarbe der Seite */
+    --hintergrund-farbe: #fff;
+
+    /* Standard-Schriftfarbe */
+    --schrift-farbe: #000;
+
+    /* Zweitfarbe (z. B. für Akzente oder Hover-Effekte) */
+    --zweit-farbe: #57CC99;
+
+    /* Dritte Farbe für zusätzliche Akzente */
+    --dritt-farbe: #80ED99;
+}
+
+/* Setzt alle Abstände und Box-Modelleinstellungen auf Standardwerte zurück */
+* {
+    /* Entfernt Außenabstand */
+    margin: 0;
+
+    /* Entfernt Innenabstand */
+    padding: 0;
+
+    /* Rechnet Border und Padding in die Gesamtgröße ein */
+    box-sizing: border-box;
+}
+
+/* Allgemeines Styling für den Seiteninhalt */
+body {
+    /* Verwendet die definierte Schriftart aus den Variablen */
+    font-family: var(--text-schriftart), sans-serif;
+
+    /* Normale Schriftstärke */
+    font-weight: normal;
+
+    /* Setzt die Hintergrundfarbe mithilfe der Variable */
+    background-color: var(--hintergrund-farbe);
+}
+
+/* Gemeinsames Styling für alle Überschriften (h1–h6) */
+h1, h2, h3, h4, h5, h6 {
+    /* Verwendet spezielle Überschriftenschriftart */
+    font-family: var(--ueberschriften), sans-serif;
+
+    /* Textfarbe der Überschriften */
+    color: var(--haupt-farbe);
+
+    /* Abstand nach unten, damit Überschrift nicht zu dicht am Text klebt */
+    margin-bottom: 3%;
+
+    /* Leichter Abstand von der linken Seite */
+    margin-left: 10px;
+}
+
+/* Haupt-Navigationsleiste am oberen Rand der Seite */
+.main-navbar {
+    /* Nutzt Flexbox, um Elemente nebeneinander anzuordnen */
+    display: flex;
+
+    /* Platzierung: Abstand zwischen linkem und rechtem Bereich (z. B. Logo und Menü) */
+    justify-content: space-between;
+
+    /* Außenabstand rundherum */
+    margin: 1%;
+
+    /* Innenabstände links und rechts */
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/* Styling für die ungeordnete Liste im Navigationsbereich */
+.main-navbar ul {
+    /* Elemente nebeneinander anordnen */
+    display: flex;
+
+    /* Abstand zwischen den Menüelementen */
+    gap: 1rem;
+
+    /* Gleiche Abstände zwischen Elementen */
+    justify-content: space-between;
+
+    /* Vertikal zentrieren */
+    align-items: center;
+
+    /* Keine Punkte oder Striche bei der Liste */
+    list-style: none;
+
+    /* Erlaubt Umbruch, wenn nicht genug Platz ist */
+    flex-wrap: wrap;
+}
+
+/* Allgemeines Styling für Links */
+a {
+    /* Entfernt die Standard-Unterstreichung */
+    text-decoration: none;
+}
+
+/* Links in der Hauptnavigation */
+.main-navbar a {
+    /* Schriftfarbe entsprechend der Variable */
+    color: var(--schrift-farbe);
+}
+
+/* Hover-Zustand für Navigationslinks */
+.main-navbar a:hover {
+    /* Fügt eine farbige Unterstreichung beim Darüberfahren hinzu */
+    text-decoration: underline var(--zweit-farbe) 2px;
+}
+
+/* Logo in der Navigation */
+#logo {
+    /* Maximale Breite des Logos */
+    max-width: 60px;
+}
+
+/* Großer Banner-Bereich mit Hintergrundbild */
+.banner {
+    /* Mindesthöhe des Banners */
+    min-height: 600px;
+
+    /* Setzt das Hintergrundbild */
+    background-image: url("bilder/bg-img.jpg");
+
+    /* Bild soll den gesamten Bereich ausfüllen */
+    background-size: cover;
+
+    /* Bild wird zentriert dargestellt */
+    background-position: center;
+
+    /* Verhindert, dass das Bild sich wiederholt */
+    background-repeat: no-repeat;
+
+    /* Inhalt wird per Flexbox zentriert */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Allgemeines Styling für Inhaltsbereiche (Sections) */
+section {
+    /* Außenabstand um die Section herum */
+    margin: 2%;
+
+    /* Innenabstand im Bereich */
+    padding: 3%;
+
+    /* Flexbox zur Anordnung der Inhalte */
+    display: flex;
+
+    /* Zentriert horizontal und vertikal */
+    justify-content: center;
+    align-items: center;
+
+    /* Abstand zwischen den Elementen */
+    gap: 2rem;
+
+    /* Inhalte umbrechen, wenn kein Platz mehr ist */
+    flex-wrap: wrap;
+}
+
+/* Absatztexte in Sections */
+section p {
+    /* Maximale Breite von 50% – damit der Text nicht zu breit ist */
+    max-width: 50%;
+
+    /* Text wird zentriert dargestellt */
+    text-align: center;
+}
+
+/* Variante einer Section mit anderer Hintergrundfarbe */
+.switch-bg-color {
+    /* Nutzt die zweite Akzentfarbe als Hintergrund */
+    background-color: var(--zweit-farbe);
+
+    /* Entfernt den Außenabstand */
+    margin: 0;
+}
+
+/* Klasse für eine vertikale (Spalten-)Anordnung mit Flexbox */
+.flex-column {
+    /* Richtet die Flex-Elemente von oben nach unten aus */
+    flex-direction: column;
+
+    /* Zentriert horizontal und vertikal */
+    justify-content: center;
+    align-items: center;
+
+    /* Kein Abstand zwischen den Elementen */
+    gap: 0;
+}
+
+/* Allgemeines Styling für Bilder */
+img {
+    /* Bilder dürfen maximal 300 px breit sein */
+    max-width: 300px;
+}
+
+/* Fußzeile der Seite */
+footer {
+    /* Hintergrundfarbe in Hauptfarbe */
+    background-color: var(--haupt-farbe);
+
+    /* Innenabstand */
+    padding: 2%;
+
+    /* Flexbox für horizontale Anordnung */
+    display: flex;
+
+    /* Platz zwischen Text und Navigation */
+    justify-content: space-between;
+
+    /* Vertikale Zentrierung */
+    align-items: center;
+
+    /* Textfarbe weiß */
+    color: white;
+
+    /* Mindesthöhe der Fußzeile */
+    min-height: 15vh;
+}
+
+/* Navigation im Footer */
+.footer-navbar ul {
+    /* Elemente nebeneinander anzeigen */
+    display: flex;
+
+    /* Abstand zwischen den Links */
+    gap: 1rem;
+
+    /* Entfernt die Aufzählungszeichen */
+    list-style: none;
+}
+
+/* Footer-Links */
+.footer-navbar a {
+    /* Weiße Schriftfarbe */
+    color: white;
+}
+
+/* Hover-Effekt für Footer-Links */
+.footer-navbar a:hover {
+    /* Unterstreichung mit Akzentfarbe */
+    text-decoration: underline var(--zweit-farbe) 3px;
+}
+
+/* Media Query: Regeln für kleine Bildschirme (max. 500px) */
+@media screen and (max-width: 500px) {
+
+    /* Paragraphen dürfen auf kleinen Bildschirmen fast die ganze Breite nutzen */
+    section p {
+        max-width: 98%;
+    }
+
+    /* Zusätzliche Abstände zwischen den Sections auf kleinen Geräten */
+    section {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Anpassung des Bereichs mit anderer Hintergrundfarbe */
+    .switch-bg-color {
+        /* Etwas mehr Innenabstand für kleinere Geräte */
+        padding: 2rem;
+    }
+
+    /* Footer-Layout wird auf kleinen Geräten untereinander angezeigt */
+    footer {
+        /* Elemente untereinander statt nebeneinander */
+        flex-direction: column-reverse;
+
+        /* Zentriert alle Inhalte */
+        justify-content: center;
+
+        /* Fügt Abstand zwischen den Elementen hinzu */
+        gap: 1rem;
+    }
+}
