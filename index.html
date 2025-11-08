@@ -13,45 +13,104 @@
 <body>
 <header>
     <nav class="main-navbar">
-        <img id="logo" src="./bilder/frog-logo.png" alt="frosch"/>
+        <img id="logo" src="bilder/t.logo.jpg" alt="frosch"/>
         <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="#ueber-mich">Über Mich</a></li>
-            <li><a href="/seiten/kontakt.html">Kontakt</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about-me">Tarot</a></li>
+             <li><a href="#about-me">Lenormand</a></li>
+            <li><a href="#about-me">Poker</a></li>
+            <li><a href="/seiten/kontakt.html">contact</a></li>
         </ul>
     </nav>
     <div class="banner">
-        <h1>Meiner Seite</h1>
+        <video id="banner-video" autoplay muted loop playsinline preload="auto" poster="bilder/bg-img.jpg">
+            <source src="video/banner.mp4" type="video/mp4" class="banner-video-source">
+            <!-- Optional: add WebM version for better quality/compression -->
+            <source src="video/banner.webm" type="video/webm">
+            Ihr Browser unterstützt dieses Video nicht.
+        </video>
+        <h1>Welcome to my website</h1>
     </div>
 </header>
 <main>
     <!--    Abschnitte deiner Startseite-->
-    <section id="ueber-mich">
-        <div>
-            <h2>Über mich</h2>
-            <img src="./bilder/candy.jpg">
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut, consequuntur minus quia repudiandae
-            totam ut vitae voluptatem? Accusantium cumque eum itaque laudantium nobis quasi quia repudiandae sed
-            soluta.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut, consequuntur minus quia repudiandae
-            totam ut vitae voluptatem? Accusantium cumque eum itaque laudantium nobis quasi quia repudiandae sed
-            soluta.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut, consequuntur minus quia repudiandae
-            totam ut vitae voluptatem? Accusantium cumque eum itaque laudantium nobis quasi quia repudiandae sed
-            soluta.</p>
+    <section id="about-me">
+        <div class="about-grid">
+            <div class="about-media">
+                <!-- Video file: place video/about.mp4 in your project -->
+                <video id="about-video" controls playsinline preload="metadata" poster="bilder/candy.jpg">
+                    <source src="video/about.mp4" type="video/mp4">
+                    <!-- Optional: add a WebM source for better compression on some browsers -->
+                    <!-- <source src="video/about.webm" type="video/webm"> -->
+                    Ihr Browser unterstützt dieses Video nicht.
+                </video>
+            </div>
 
+            <div id="about-transcript" class="about-transcript">
+                <h2>About me</h2>
+                <div class="transcript-text">
+                    <p>I'm Joli — a ThetaHealer, energy worker, and tarot reader. Welcome to my website.</p>
+                    <p>I've developed my own unique method — a combination of ThetaHealing, energy work, and intuitive tarot.</p>
+                    <p>Through my strong intuition, I receive messages from other dimensions — from the subconscious, from past lives, from the subtle energies that shape who we are.</p>
+                    <p>If you have questions you can't answer — about your life, your choices, your soul, or your path — I can help you find clarity.</p>
+                    <p>Because the future is not fixed. Together, we can read it, understand it — and reshape it.</p>
+                </div>
+            </div>
+        </div>
+
+    
+        </section>
+    <section class="switch-bg-color section-grid">
+        <div class="section-media">
+            <img src="bilder/placeholder.jpg" alt="Section One Image" class="section-image">
+        </div>
+        <div class="section-content">
+            <h2>1. Abschnitt</h2>
+            <div class="content-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut, consequuntur minus quia repudiandae
+                    totam ut vitae voluptatem? Accusantium cumque eum itaque laudantium nobis quasi quia repudiandae sed
+                    soluta.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut, consequuntur minus quia repudiandae
+                    totam ut vitae voluptatem? Accusantium cumque eum itaque laudantium nobis quasi quia repudiandae sed
+                    soluta.</p>
+            </div>
+            <button class="section-button">Learn More</button>
+        </div>
     </section>
-    <section class="switch-bg-color flex-column">
-        <h2>2. Abschnitt</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut, consequuntur minus quia repudiandae
-            totam ut vitae voluptatem? Accusantium cumque eum itaque laudantium nobis quasi quia repudiandae sed
-            soluta.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut, consequuntur minus quia repudiandae
-            totam ut vitae voluptatem? Accusantium cumque eum itaque laudantium nobis quasi quia repudiandae sed
-            soluta.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut, consequuntur minus quia repudiandae
-            totam ut vitae voluptatem? Accusantium cumque eum itaque laudantium nobis quasi quia repudiandae sed
-            soluta.</p>
     </section>
-    <section>
-        <h2>3. Abschnitt😊😊</h2>
+    <section class="switch-bg-color section-grid">
+        <div class="section-media">
+            <img src="bilder/placeholder2.jpg" alt="Section Two Image" class="section-image">
+        </div>
+        <div class="section-content">
+            <h2>2. Abschnitt</h2>
+            <div class="content-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut, consequuntur minus quia repudiandae
+                    totam ut vitae voluptatem? Accusantium cumque eum itaque laudantium nobis quasi quia repudiandae sed
+                    soluta.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut, consequuntur minus quia repudiandae
+                    totam ut vitae voluptatem? Accusantium cumque eum itaque laudantium nobis quasi quia repudiandae sed
+                    soluta.</p>
+            </div>
+            <button class="section-button">Learn More</button>
+        </div>
+    </section>
+    <section class="section-grid">
+        <div class="section-media">
+            <img src="bilder/placeholder3.jpg" alt="Section Three Image" class="section-image">
+        </div>
+        <div class="section-content">
+            <h2>3. Abschnitt</h2>
+            <div class="content-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut, consequuntur minus quia repudiandae
+                    totam ut vitae voluptatem? Accusantium cumque eum itaque laudantium nobis quasi quia repudiandae sed
+                    soluta.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut, consequuntur minus quia repudiandae
+                    totam ut vitae voluptatem? Accusantium cumque eum itaque laudantium nobis quasi quia repudiandae sed
+                    soluta.</p>
+            </div>
+            <button class="section-button">Learn More</button>
+        </div>
     </section>
 </main>
 <footer>

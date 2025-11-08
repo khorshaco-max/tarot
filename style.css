@@ -10,20 +10,22 @@
     /* Schriftart für Überschriften */
     --ueberschriften: Momo Trust Sans;
 
-    /* Hauptfarbe für Elemente oder Überschriften */
-    --haupt-farbe: #22577A;
+    /* New color scheme: Black, White, Gold, and Burgundy */
+    --gold: #D4AF37;
+    --gold-light: #F4D03F;
+    --burgundy: #800020;
+    --burgundy-dark: #4A0012;
+    --black: #1A1A1A;
+    --white: #FFFFFF;
+    --off-white: #F5F5F5;
+    --grey-light: #E5E5E5;
 
-    /* Hintergrundfarbe der Seite */
-    --hintergrund-farbe: #fff;
-
-    /* Standard-Schriftfarbe */
-    --schrift-farbe: #000;
-
-    /* Zweitfarbe (z. B. für Akzente oder Hover-Effekte) */
-    --zweit-farbe: #57CC99;
-
-    /* Dritte Farbe für zusätzliche Akzente */
-    --dritt-farbe: #80ED99;
+    /* Main colors reassignment */
+    --haupt-farbe: var(--burgundy);
+    --zweit-farbe: var(--gold);
+    --dritt-farbe: var(--black);
+    --hintergrund-farbe: var(--white);
+    --schrift-farbe: var(--black);
 }
 
 /* Setzt alle Abstände und Box-Modelleinstellungen auf Standardwerte zurück */
@@ -124,29 +126,119 @@ a {
 #logo {
     /* Maximale Breite des Logos */
     max-width: 60px;
+    /* Leicht abgerundete Ecken für das Logo */
+    border-radius: 12px;
+    /* Sanfter Übergang für Hover-Effekte */
+    transition: transform 0.3s ease;
 }
 
 /* Großer Banner-Bereich mit Hintergrundbild */
 .banner {
-    /* Mindesthöhe des Banners */
-    min-height: 600px;
+    /* کاهش ارتفاع بنر */
+    min-height: 300px;
+    max-height: 50vh; /* حداکثر 50% ارتفاع صفحه */
 
-    /* Setzt das Hintergrundbild */
-    background-image: url("bilder/bg-img.jpg");
+    /* Entfernen des Hintergrundbildes und Vorbereitung für Video-Hintergrund */
+    background: none;
 
-    /* Bild soll den gesamten Bereich ausfüllen */
-    background-size: cover;
+    /* Container positioniert das Video absolut innerhalb seiner Grenzen */
+    position: relative;
+    overflow: hidden;
 
-    /* Bild wird zentriert dargestellt */
-    background-position: center;
-
-    /* Verhindert, dass das Bild sich wiederholt */
-    background-repeat: no-repeat;
-
-    /* Inhalt wird per Flexbox zentriert */
+    /* Inhalt (H1) zentrieren über dem Video */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Banner video: füllt den Banner komplett, object-fit sorgt für korrektes Zuschneiden */
+.banner video#banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Überschrift über dem Video sichtbar halten */
+.banner h1 {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+/* About section layout: video + boxed text side-by-side */
+.about-grid {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.about-media,
+.about-transcript {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.about-media video {
+    width: 100%;
+    height: 360px; /* reduced height */
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    background: #000;
+}
+
+.about-transcript {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 0.9rem 0;  /* remove horizontal padding */
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    height: 360px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.about-transcript h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 800px) {
+    .about-grid {
+        flex-direction: column;
+    }
+
+    .about-media video,
+    .about-transcript {
+        height: auto;
+        max-height: none;
+    }
+}
+
+/* Make transcript text fit the box: slightly smaller font and tighter line-height */
+.about-transcript .transcript-text {
+    direction: ltr;
+    text-align: left;
+    font-size: clamp(0.82rem, 1.4vw, 0.94rem);
+    line-height: 1.4;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.about-transcript .transcript-text p {
+    margin: 0 0 0.6rem 0;
+    max-width: 100% !important;
+    width: 100%;
+    text-align: left !important;
 }
 
 /* Allgemeines Styling für Inhaltsbereiche (Sections) */
@@ -187,6 +279,142 @@ section p {
 
     /* Entfernt den Außenabstand */
     margin: 0;
+}
+
+/* New section grid layout similar to about-grid */
+.section-grid {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin: 2rem;
+    flex-direction: row;
+    padding: 2.5rem;
+    background: linear-gradient(to bottom right, var(--black), var(--burgundy-dark));
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    border: 1px solid var(--gold);
+}
+
+/* Color variations for each section */
+.section-grid:nth-of-type(1) {
+    background: linear-gradient(to bottom right, var(--black), var(--burgundy));
+}
+
+.section-grid:nth-of-type(2) {
+    background: linear-gradient(to bottom right, var(--burgundy), var(--burgundy-dark));
+}
+
+.section-grid:nth-of-type(3) {
+    background: linear-gradient(to bottom right, var(--burgundy-dark), var(--black));
+}
+
+.section-media,
+.section-content {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.section-image {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+    background: #f5f5f5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.section-image:hover {
+    transform: scale(1.02);
+}
+
+.section-content {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--gold);
+    padding: 1.8rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    color: var(--black);
+}
+
+.section-content h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--burgundy);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 0.5rem;
+}
+
+.content-text {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-text p {
+    margin: 0 0 0.8rem 0;
+    max-width: 100% !important;
+    width: 100%;
+    text-align: left !important;
+    /* Responsive font size that adjusts to container */
+    font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+    /* Tighter line height to fit more text */
+    line-height: 1.4;
+    /* Ensure text fills width */
+    text-align: justify !important;
+}
+
+.section-button {
+    margin-top: 1rem;
+    padding: 0.9rem 1.8rem;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--black);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.section-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+}
+
+@media screen and (max-width: 800px) {
+    .section-grid {
+        flex-direction: column;
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .section-media,
+    .section-content {
+        height: auto;
+        width: 100%;
+    }
+    
+    .section-content {
+        min-height: 300px;
+    }
+
+    .section-image {
+        height: 280px;
+        margin-bottom: 1rem;
+    }
 }
 
 /* Klasse für eine vertikale (Spalten-)Anordnung mit Flexbox */
@@ -287,4 +515,17 @@ footer {
         /* Fügt Abstand zwischen den Elementen hinzu */
         gap: 1rem;
     }
+}
+
+/* Minimal styling for the transcript text: left-aligned English */
+.transcript-text {
+    direction: ltr;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0.5rem;
+}
+
+.about-transcript[hidden] {
+    display: none;
 }
