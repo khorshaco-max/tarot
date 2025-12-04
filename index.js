@@ -30,3 +30,19 @@ function setupTranscriptToggle() {
 document.addEventListener('DOMContentLoaded', function(){
     setupTranscriptToggle()
 })
+
+const video = document.getElementById("about-video");
+
+  // وقتی ویدیو تموم شد
+  video.addEventListener("ended", function () {
+    // پخش رو به ابتدا برمی‌گردونه
+    video.currentTime = 0;
+    // و پوستر دوباره ظاهر میشه
+    video.load();
+      // اطمینان از اینکه پوستر دوباره ظاهر بشه
+  setTimeout(() => {
+    video.removeAttribute("src");
+    video.load();
+    video.setAttribute("poster", "bilder/PORT.jpg");
+  }, 100);
+});
