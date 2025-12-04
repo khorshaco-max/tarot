@@ -2,6 +2,8 @@
 <html lang="En">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--    Einbinden von Google Font Schriftarten hier:-->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Momo+Trust+Sans:wght@200..800&display=swap"
@@ -13,12 +15,12 @@
 <body>
 <header>
     <nav class="main-navbar">
-        <img id="logo" src="bilder/t.logo.jpg" alt="frosch"/>
+        <img id="logo" src="bilder/t.logo.jpg" alt="logo"/>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about-me">Tarot</a></li>
-             <li><a href="#about-me">Lenormand</a></li>
-            <li><a href="#about-me">Poker</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/seiten/indexT.html">Tarot</a></li>
+            <li><a href="/seiten/indexL.html">Lenormand</a></li>
+            <li><a href="/seiten/indexP.html">Poker</a></li>
             <li><a href="/seiten/kontakt.html">contact</a></li>
         </ul>
     </nav>
@@ -32,34 +34,30 @@
         <h1>Welcome to my website</h1>
     </div>
 </header>
-<main>
-    <!--    Abschnitte deiner Startseite-->
-    <section id="about-me">
-        <div class="about-grid">
-            <div class="about-media">
-                <!-- Video file: place video/about.mp4 in your project -->
-                <video id="about-video" controls playsinline preload="metadata" poster="bilder/PORT.jpg">
-                    <source src="video/about-video.mp4" type="video/mp4">
-                    <!-- Optional: add a WebM source for better compression on some browsers -->
-                    <!-- <source src="video/about.webm" type="video/webm"> -->
-                    Ihr Browser unterstützt dieses Video nicht.
-                </video>
-            </div>
 
-            <div id="about-transcript" class="about-transcript">
-                <h2>About me</h2>
-                <div class="transcript-text">
-                    <p>I'm Joli — a ThetaHealer, energy worker, and tarot reader. Welcome to my website.</p>
-                    <p>I've developed my own unique method — a combination of ThetaHealing, energy work, and intuitive tarot.</p>
-                    <p>Through my strong intuition, I receive messages from other dimensions — from the subconscious, from past lives, from the subtle energies that shape who we are.</p>
-                    <p>If you have questions you can't answer — about your life, your choices, your soul, or your path — I can help you find clarity.</p>
-                    <p>Because the future is not fixed. Together, we can read it, understand it — and reshape it.</p>
-                </div>
-            </div>
+    <!--    Abschnitte deiner Startseite-->
+    <section id="about-me" class="switch-bg-color section-grid">
+    <div class="about-grid">
+        <div class="about-media">
+            <video id="about-video" controls playsinline preload="metadata" poster="bilder/PORT.jpg">
+                <source src="video/about-video.mp4" type="video/mp4">
+                Ihr Browser unterstützt dieses Video nicht.
+            </video>
         </div>
 
-    
-        </section>
+        <div id="about-transcript" class="about-transcript">
+            <h2>About me</h2>
+            <div class="transcript-text">
+                <p>I'm Joli — a ThetaHealer, energy worker, and tarot reader. Welcome to my website.</p>
+                <p>I've developed my own unique method — a combination of ThetaHealing, energy work, and intuitive tarot.</p>
+                <p>Through my strong intuition, I receive messages from other dimensions — from the subconscious, from past lives, from the subtle energies that shape who we are.</p>
+                <p>If you have questions you can't answer — about your life, your choices, your soul, or your path — I can help you find clarity.</p>
+                <p>Because the future is not fixed. Together, we can read it, understand it — and reshape it.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
     <section class="switch-bg-color section-grid">
         <div class="section-media">
             <img src="bilder/abschnit1-foto.png" alt="Section One Image" 
@@ -68,16 +66,15 @@
         <div class="section-content">
             <h2>TAROT</h2>
             <div class="content-text">
-                <p>Tarot is built upon a blend of symbolism, numerology, Kabbalistic mysticism, and astrology.
-                Within its 78 cards lies the reflection of the human soul’s journey — from the beginning of awareness to inner awakening and transformation.
-                Every number, color, and symbol on the cards resonates with universal energy and cosmic rhythm.
-                Tarot is a bridge between the science of the human psyche and the ancient wisdom of the cosmos —
-                a tool for discovering meaning, intuition, and harmony between the mind, the soul, and the energy of the universe.</p>
+              <p>Tarot works like a deep mirror, reflecting the hidden layers of your mind and intuition — revealing things you might not even realize you already know. <br>And here’s the fascinating part: even though Tarot isn’t designed for exact timing, ultra-specific details, or guaranteed outcomes, it can still uncover pathways, possibilities, and inner truths with remarkable accuracy.</p>
+              <p><b>Start your journey right here.</b></p>
             </div>
-            <button class="section-button">Learn More</button>
+            <a href="/seiten/indexT.html"> 
+            <button class="section-button">click</button>
+            </a>
         </div>
     </section>
-    </section>
+   
     <section class="switch-bg-color section-grid">
         <div class="section-media">
             <img src="bilder/anschnitt2-foto.png" alt="Section Two Image" class="section-image">
@@ -85,14 +82,15 @@
         <div class="section-content">
             <h2>LENORMAND</h2>
             <div class="content-text">
-                <p>The Lenormand card deck originated around 1800 in France and is named after Madame Marie Anne Adélaïde Lenormand, the legendary fortune-teller of Napoleon and Josephine.
-                This deck consists of 36 symbolic cards, each carrying clear and inspiring messages about one’s life path, relationships, and personal choices.
+                <p>Lenormand works as a direct and precise system of signs, showing reality without unnecessary complexity. 
+                    <br>This oracle reveals practical events, upcoming paths, intentions, and real-life outcomes with clarity and detail. Its standout strength is its ability to give clear, grounded predictions about <b>everyday situations</b> and show exactly what is likely to happen.
 
-                Unlike the Tarot, which focuses more on symbolic, inner, and spiritual aspects,
-                Lenormand offers a direct reflection of everyday reality —
-                cards that provide deep insight and guidance about decisions, relationships, career paths, and even the near future with remarkable clarity.</p>
+                    <p><b>Start your journey right now.</b></p>
+            </p>
             </div>
-            <button class="section-button">Learn More</button>
+            <a href="/seiten/indexL.html">
+            <button class="section-button">click</button>
+            </a>
         </div>
     </section>
     <section class="section-grid">
@@ -103,24 +101,37 @@
             <h2>POKER</h2>
             <div class="content-text">
                 
-            <p>In Poker Divination, the symbols, colors, and numbers of the cards are used to receive psychological and spiritual messages.
-            This method is based on the connection between numerology, psychology, and inner energies, and while it shares similarities with Tarot and Lenormand,
-            it is a simpler, faster, and highly intuitive approach.
-            With fewer cards, it can reveal deep and precise insights about one’s inner state, decisions, and spiritual path —
-            a quality that makes it a truly unique tool for understanding energies and accessing the subconscious mind.</p>
+            <p>Poker cards use the simple structure of numbers, suits, and court cards to reveal the real energies at play in life—such as movement, opportunities, risks, and influential people. <br>Their messages are clear, practical, and free of heavy symbolism, offering a realistic view of trends and possible outcomes.
+
+            <br>They also work remarkably well for yearly forecasts, providing a straightforward and accurate overview of the year ahead.</p>
+            <p><b>Start your journey right here.</b></p>
+        </p>
             </div>
-            <button class="section-button">Learn More</button>
+            <a href="/seiten/indexP.html">
+            <button class="section-button">click</button>
+            </a>
         </div>
     </section>
-</main>
+
 <footer>
-    <p>Copyright @Lorem Ipsum <span id="current-year"></span></p>
+    <p>Copyright ©2025 tarot.khorsha.com
+ <span id="current-year"></span></p>
     <nav class="footer-navbar">
         <ul>
-            <li><a href="seiten/impressum.html">Impressum</a></li>
-            <li><a href="#">Datenschutz</a></li>
+            <li><a href="seiten/impressum.html">Imprint</a></li>
+            <li><a href="/seiten/datenschutz.html">Privacy Policy</a></li>
         </ul>
     </nav>
+    
+    <div class="social-icons">
+        <a href="https://instagram.com/tarooot42?igsh=MWx4aGNuYW5maXAxMw==" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://t.me/Tarooot42" target="_blank">
+            <i class="fab fa-telegram"></i>
+        </a>
+    </div>
 </footer>
 <script src="index.js"></script>
 </body>

@@ -2,41 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--    Einbinden von Google Font Schriftarten hier:-->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-          rel="stylesheet">
     <!--    Stylesheet mit HTML verbinden-->
-    <link rel="stylesheet" href="../style.css">
-    <title>Kontakt</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/seiten/stylek.css">
+
+
+    <title>contact</title>    
+    
 </head>
 <body>
 <header>
     <nav class="main-navbar">
-        <a href="../index.html"><img id="logo" src="../bilder/frog-logo.png" alt="frosch"/></a>
+        <img id="logo" src="/bilder/t.logo.jpg" alt="logo"/>
         <ul>
-            <li><a href="../index.html">Startseite</a></li>
-            <li><a href="../index.html#ueber-mich">Über Mich</a></li>
-            <li><a href="/seiten/kontakt.html">Kontakt</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/seiten/indexT.html">Tarot</a></li>
+            <li><a href="/seiten/indexL.html">Lenormand</a></li>
+            <li><a href="/seiten/indexP.html">Poker</a></li>
+            <li><a href="/seiten/kontakt.html">contact</a></li>
         </ul>
     </nav>
 </header>
+<body>
 <main>
-    <h1>Kontakt</h1>
-    <!--Kontaktformular hier-->
-    <form></form>
-    <!--Google Maps Karte?-->
-    <p>Kontaktinformationen</p>
+<section class="section-grid">
+    <div class="contact-wrapper">
+
+        <div class="contact-text">
+            <h2>Contact</h2>
+            <p>If you’d like to book a reading or ask a question, please fill out the form.</p> <p>Feel free to use the message box to share what you’re looking for or the topic you want clarity on.</p> <p>I’ll get back to you by email as soon as possible.</p> <p>Thank you for reaching out.</p>
+        </div>
+  <!--formular-->
+<form class="contact-form">
+        <label for="vorname">first name:</label>
+        <input required type="text" id="vorname" placeholder="your name"/>
+
+        <label>last name:</label>
+        <input type="text" id="Nachname" placeholder="your family"/>
+        
+<!--Emailbox and telefonbox--> 
+<!-- پرکردن این بخش الزانی است با ریکوایرد عنوان-->   
+        <label for="email">Email</label>
+        <input required type="email" id="email" placeholder="test@gmail.com"/>
+        
+        <label for="tel">phone number:</label>
+        <input required type="tel" id="tel" placeholder="+4368110113454">
+
+        <label for="nachricht">Message:</label>
+        <textarea rows="6" id="nachricht" placeholder="type your message....."></textarea>
+     <!--checkbox datenschutz-->  
+        <div id="Datenschutz"> 
+        <input type="checkbox" id="data-ok" name="Datenschutz">
+        <label for="data-ok">Privacy Policy</label>
+        </div>
+
+        <button type="submit">Send</button>
+        
+        </form>
+    
+</section>
+
 </main>
+</body>
 <footer>
-    <p>Copyright @Lorem Ipsum <span id="current-year"></span></p>
+    <p>Copyright ©2025 tarot.khorsha.com
+ <span id="current-year"></span></p>
     <nav class="footer-navbar">
         <ul>
-            <li><a href="./impressum.html">Impressum</a></li>
-            <li><a href="#">Datenschutz</a></li>
+            <li><a href="seiten/impressum.html">Imprint</a></li>
+            <li><a href="/seiten/datenschutz.html">Privacy Policy</a></li>
         </ul>
     </nav>
+    
+    <div class="social-icons">
+        <a href="https://instagram.com/YourPage" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://t.me/YourTelegram" target="_blank">
+            <i class="fab fa-telegram"></i>
+        </a>
+    </div>
 </footer>
-<script src="../index.js"></script>
+<script src="/index.js"></script>
 </body>
 </html>

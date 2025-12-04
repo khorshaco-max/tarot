@@ -1,38 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--    Einbinden von Google Font Schriftarten hier:-->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-          rel="stylesheet">
-    <!--    Stylesheet mit HTML verbinden-->
-    <link rel="stylesheet" href="../style.css">
-    <title>Impressum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Imprint</title>
+    <link rel="stylesheet" href="/style.css"> <!-- اگر فایل استایل داری -->
+    <style>
+        .impressum-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            line-height: 1.7;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .impressum-container h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .impressum-container h2 {
+            margin-top: 30px;
+            font-size: 1.3rem;
+        }
+
+        .impressum-container p {
+            margin-bottom: 12px;
+        }
+
+        .impressum-container ul {
+            margin-left: 20px;
+            padding-left: 15px;
+        }
+
+        .impressum-container li {
+            margin-bottom: 8px;
+        }
+    </style>
 </head>
+
 <body>
-<header>
+    <header>
     <nav class="main-navbar">
-        <img id="logo" src="../bilder/frog-logo.png" alt="frosch"/>
+        <img id="logo" src="/bilder/t.logo.jpg" alt="logo"/>
         <ul>
-            <li><a href="../index.html">Startseite</a></li>
-            <li><a href="../index.html#ueber-mich">Über Mich</a></li>
-            <li><a href="/seiten/kontakt.html">Kontakt</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="/seiten/indexT.html">Tarot</a></li>
+            <li><a href="/seiten/indexL.html">Lenormand</a></li>
+            <li><a href="/seiten/indexP.html">Poker</a></li>
+            <li><a href="/seiten/kontakt.html">contact</a></li>
         </ul>
     </nav>
 </header>
-<main>
-    <h1>Impressum</h1>
-</main>
+    <section class="impressum-container">
+
+        <h1>Impressum</h1>
+
+        <p><strong>Informationspflicht laut §5 E-Commerce Gesetz und Offenlegungspflicht laut §25 Mediengesetz</strong></p>
+
+        <p><strong>Joli Taheri</strong><br>
+        Robert-Stolz Straße 12/3<br>
+        4020 Linz<br>
+        Österreich</p>
+
+        <p><strong>Tel:</strong> +43 (0)68110881818<br>
+        <strong>E-Mail:</strong> khorsha.co@gmail.com</p>
+
+        <h2>Copyright & Urheberrechtshinweis</h2>
+        <p>
+            Alle Inhalte dieser Webpräsenz, insbesondere Texte, Fotografien und Grafiken, sind urheberrechtlich geschützt 
+            und teilweise lizensiert. Das Urheberrecht liegt, soweit nicht ausdrücklich anders gekennzeichnet, bei der im 
+            Impressum angeführten natürlichen bzw. juristischen Person. Bitte fragen Sie uns, falls Sie die Inhalte dieses 
+            Internetangebotes in irgendeiner Art und Weise verwenden möchten.
+        </p>
+
+        <p>
+            Unter der „Creative Commons“-Lizenz veröffentlichte Inhalte sind als solche gekennzeichnet. Sie dürfen entsprechend 
+            den angegebenen Lizenzbedingungen verwendet werden.
+        </p>
+
+        <p>
+            Wer gegen das Urheberrecht verstößt (z.B. Bilder oder Texte unerlaubt kopiert), macht sich unter Umständen gem. UrhG strafbar.
+        </p>
+
+        <h2>Ihre Rechte</h2>
+        <p>
+            Ihnen stehen bezüglich Ihrer bei uns gespeicherten Daten grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, 
+            Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu.
+        </p>
+
+        <p>
+            Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen 
+            Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich bei der oben genannten E-Mail-Adresse oder Ihrer 
+            Datenschutzbehörde beschweren.
+        </p>
+
+        <br>
+
+        <p style="font-size:0.9rem; color:#777;">
+            Generiert mit dem kostenlosen Impressum Generator von idigIT e.U.
+        </p>
+
+    </section>
+</body>
 <footer>
-    <p>Copyright @Lorem Ipsum <span id="current-year"></span></p>
+    <p>Copyright ©2025 tarot.khorsha.com
+ <span id="current-year"></span></p>
     <nav class="footer-navbar">
         <ul>
-            <li><a href="./impressum.html">Impressum</a></li>
-            <li><a href="#">Datenschutz</a></li>
+            <li><a href="impressum.html">Imprint</a></li>
+            <li><a href="/seiten/datenschutz.html">Privacy Policy</a></li>
         </ul>
     </nav>
+    
+    <div class="social-icons">
+        <a href="https://instagram.com/YourPage" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://t.me/YourTelegram" target="_blank">
+            <i class="fab fa-telegram"></i>
+        </a>
+    </div>
 </footer>
-<script src="../index.js"></script>
-</body>
 </html>
