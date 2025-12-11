@@ -1,0 +1,77 @@
+
+
+ body{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+
+    background-image: url(/bilder/kontakt.img.png); /* مسیر عکس */
+    background-size: cover;  /* عکس کل صفحه را پر کند */
+    background-position: center; /* عکس در مرکز */
+    background-repeat: no-repeat; /* تکرار نشود */
+ }
+
+.main-navbar a {
+   color: rgb(255, 255, 255);
+
+}
+  .text-block ul {
+        padding-left: 25px; /* فاصله از چپ */
+        margin-left: 10px;  /* کمی فاصله اضافه از بدنه */
+    }
+.section-grid {
+    display: flow;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1rem;        /* پدینگ کم و استاندارد */
+    margin: 2rem auto;
+    max-width: 1200px;    /* اجازه نمی‌دهد باکس‌ها از صفحه بزنند بیرون */
+    width: 100%;
+}
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    padding: 1.5rem;   /* فاصله از لبه کانتینر */
+}
+.contact-text {
+    color: white;
+}
+    form{
+         background-color: rgba(132, 116, 108, 0.604); 
+         display: flex;
+         flex-direction: column;
+          /* max-width: 60%; نو لازم نداریم فعلاای*/ 
+         margin: 0 auto;
+          padding: 2rem;
+           border-radius: 20px; 
+           width: 100%;
+         max-width: 450px; 
+          /* vw معیار را در بیلد شیرم بالا می برد معتبر برای نماش است*/ 
+        }
+          button {
+            width: 150px;
+            height: 30px;
+            border:none; background-color: rgb(67, 65, 59); 
+            color: rgb(246, 246, 238);border-radius: 10px; }
+            
+            label{ 
+                font-family: Arial, Helvetica, sans-serif;
+                 margin-bottom: 7px; /* width: 60%; */ }
+                 
+                 input { 
+                    margin-bottom: 15px; }
+                    
+                    #Datenschutz input{
+                         width: auto;
+                        height: auto;
+                        margin-right: 8px;
+                        padding: 0;
+                    }
+ footer {
+   color: aliceblue;
+   }       
+   .footer-navbar  a { color: aliceblue;}
